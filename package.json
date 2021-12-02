@@ -1,0 +1,36 @@
+{
+  "name": "google-ads-linkchecker",
+  "version": "1.0.0",
+  "description": "Simple script for validating final urls with Google Ads Scripts",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Digitalsterne-GmbH/google_ads_linkchecker.git"
+  },
+  "keywords": [
+    "Google Ads",
+    "Link Checker",
+    "Google Ads Scripts"
+  ],
+  "author": "Patrick Schababerle (Digitalsterne GmbH)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Digitalsterne-GmbH/google_ads_linkchecker/issues"
+  },
+  "homepage": "https://github.com/Digitalsterne-GmbH/google_ads_linkchecker#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "path": "^0.12.7",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "transform-runtime": "^0.0.0"
+  }
+}
