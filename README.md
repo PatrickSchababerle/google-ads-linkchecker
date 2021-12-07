@@ -77,7 +77,7 @@ var config = {
 }
 
 function main() {
-  var script = UrlFetchApp.fetch('https://cdn.jsdelivr.net/gh/PatrickSchababerle/google-ads-linkchecker@1.0.0/dist/bundle.js').getContentText('utf-8');
+  var script = UrlFetchApp.fetch('https://cdn.jsdelivr.net/gh/PatrickSchababerle/google-ads-linkchecker/dist/bundle.js').getContentText('utf-8');
   eval(script);
 }
 ```
