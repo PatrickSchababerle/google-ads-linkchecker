@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Digitalsterne-GmbH/google_ads_linkchecker.git"
+    "url": "git+https://github.com/Digitalsterne-GmbH/google-ads-linkchecker.git"
   },
   "keywords": [
     "Google Ads",
@@ -19,9 +19,9 @@
   "author": "Patrick Schababerle (Digitalsterne GmbH)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Digitalsterne-GmbH/google_ads_linkchecker/issues"
+    "url": "https://github.com/Digitalsterne-GmbH/google-ads-linkchecker/issues"
   },
-  "homepage": "https://github.com/Digitalsterne-GmbH/google_ads_linkchecker#readme",
+  "homepage": "https://github.com/Digitalsterne-GmbH/google-ads-linkchecker#readme",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",

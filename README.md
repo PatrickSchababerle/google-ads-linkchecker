@@ -8,7 +8,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="#" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/ PatrickSchababerle/Google Ads Link Checker" />
+    <img alt="License: ISC" src="https://img.shields.io/github/license/PatrickSchababerle/google-ads-linkchecker" />
   </a>
 </p>
 
@@ -94,7 +94,7 @@ That's it, your ads and extensions are now being testet once a day. In case of e
 👤 **Patrick Schababerle**
 
 * Website: https://www.secret-share.com
-* Github: [@ PatrickSchababerle](https://github.com/ PatrickSchababerle)
+* Github: [@ PatrickSchababerle](https://github.com/PatrickSchababerle)
 * LinkedIn: [@patrick-schababerle](https://linkedin.com/in/patrick-schababerle)
 
 ## Show your support
