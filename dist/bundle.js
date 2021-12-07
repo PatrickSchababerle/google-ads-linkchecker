@@ -49,7 +49,27 @@ var queue = {
              * Write to index
              **/
 
-            this.index[url].push(origin);
+            if(this.index[url].indexOf(origin) == -1) {
+                this.index[url].push(origin);
+            }
+
+            /**
+             * Determine weather url already exists in counter or not
+             **/
+
+            if(this.counter[url] == undefined) {
+                this.counter[url] = {};
+            }
+
+            if(this.counter[url][origin] == undefined) {
+                this.counter[url][origin] = 1;
+            }
+
+            /**
+             * Write to counter
+             **/
+
+            this.counter[url][origin]++;
 
         }
         return true;
@@ -100,10 +120,16 @@ var queue = {
         /**
          * Log current processing progress in determined steps
          **/
-        if(index == 0) {
-            Logger.log('   [' + (index + 1) + '/' + queue.content.length + '] Fetching ' + queue.content[index] + '...');
-        } else if(Number.isInteger((index + 1) / config.loggerSteps)) {
-            Logger.log('   [' + (index + 1) + '/' + queue.content.length + '] Fetching ' + queue.content[index] + '...');
+        if(index == 0 || Number.isInteger((index + 1) / config.loggerSteps)) {
+            Logger.log('   [' + (index + 1) + '/' + queue.content.length + '] ' + spacing((index + 1), queue.content.length, '') + 'Fetching ' + queue.content[index] + '...');
+        }
+
+        function spacing(index, max, offset) {
+            var spacer = '';
+            for(var i = 0; i < (max.toString().length - index.toString().length); i++) {
+                spacer += ' ';
+            }
+            return spacer + offset;
         }
     },
 
@@ -117,7 +143,13 @@ var queue = {
      * Index of urls and their origin
      **/
 
-    index : {}
+    index : {},
+
+    /**
+     * Count of the occurences
+     **/
+
+    counter : {}
 }
 
 var urls = {
@@ -232,7 +264,7 @@ var mailer = {
                     table += '<tr><td>' + sub_arr[0] + '</td><td>' + sub_arr[1] + '</td></tr>';
                     table += '<tr><td colspan="2" style="color:grey;font-size:8pt;"><ul>';
                     queue.index[sub_arr[0]].forEach(function(origin) {
-                        table += '<li>' + origin + '</li>'
+                        table += '<li>' + queue.counter[sub_arr[0]][origin] + ' x ' + origin + '</li>'
                     });
                     table += '</ul></td>';
                 });
