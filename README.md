@@ -16,9 +16,78 @@
 
 ## Usage
 
+1. Login to your Google Ads account
+2. Go to "Tools & Settings" > "Scripts"
+3. Create a new script
+4. Paste the following content into the script
+5. Switch on the new scripts experience (Beta)
+
 ```sh
-Create a new script inside your Google Ads Account and start by adding the integration script and config.
+var config = {
+  
+  /**
+  *
+  * Determine weather parameters are tested
+  *
+  *   false       -> Test with parameters
+  *   true        -> strip parameters
+  */
+  
+  stripParameters : true,
+  
+  /**
+  *
+  * Set the logging steps
+  *
+  *   25          -> Log status every 25 urls
+  */
+  
+  loggerSteps : 25,
+  
+  /**
+  *
+  * Set your mail credentials
+  *
+  *   recipient   -> This adress will recieve issues
+  *                  You can provide multiple email adresses by seperating them with a comma
+  *                  f.e. 'xx@company.com,yy.company.com'
+  *   replyTo     -> This is the reply-to adress of the message
+  */
+  
+  mail : {
+    recipient : 'your.name@yourcompany.com',
+    replyTo : 'noreply@yourcompany.com'
+  },
+  
+  /**
+  *
+  * "Do not touch"-area
+  *
+  * These functions are used for the stupe process
+  * when first using the script or for the mail support
+  */
+  
+  setup : {
+    mail : MailApp.getRemainingDailyQuota(),
+    acc : {
+      id : AdsApp.currentAccount().getCustomerId(),
+      name : AdsApp.currentAccount().getName()
+    }
+  }
+}
+
+function main() {
+  var script = UrlFetchApp.fetch('https://XXXX/dist/bundle.js').getContentText('utf-8');
+  eval(script);
+}
 ```
+
+6. Afterwards add your details to the config object
+7. Click "Save" and "Preview"
+8. Authorize the script using your login credentials
+9. Go back to "Scripts" and schedule the script once a day
+
+That's it, your ads and extensions are now being testet once a day. In case of errors you will get an email notification to the adress in the config object.
 
 ## Author
 
