@@ -14,10 +14,6 @@
 
 > Simple script for validating final urls with Google Ads Scripts
 
-### 🏠 [Homepage]( )
-
-### ✨ [Demo]( )
-
 ## Usage
 
 ```sh
