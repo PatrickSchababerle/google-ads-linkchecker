@@ -294,5 +294,5 @@ queue.process();
 if(errors.length) {
     mailer.invalid();
 } else {
-    Logger.log('   CHECK OF ' + getLength(valid) + ' COMPLETED - No errors occured');
+    Logger.log('   CHECK OF ' + valid.length + ' COMPLETED - No errors occured');
 }
