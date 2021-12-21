@@ -89,6 +89,11 @@ function main() {
 
 That's it, your ads and extensions are now being testet once a day. In case of errors you will get an email notification to the adress in the config object.
 
+## Changelog
+
+- 1.0.1 Bugfix regarding url gathering from extensions
+- 1.0.0 Initial Release
+
 ## Author
 
 👤 **Patrick Schababerle**

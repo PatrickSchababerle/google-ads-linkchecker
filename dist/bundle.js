@@ -183,7 +183,7 @@ var urls = {
 
     ext : {
         get : function() {
-            var ext = AdsApp.extensions()
+            var ext = AdsApp.currentAccount().extensions()
                 .sitelinks()
                 .withCondition("Status = ENABLED")
                 .get();

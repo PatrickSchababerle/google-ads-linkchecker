@@ -1,6 +1,6 @@
 {
   "name": "google-ads-linkchecker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple script for validating final urls with Google Ads Scripts",
   "main": "src/index.js",
   "scripts": {
