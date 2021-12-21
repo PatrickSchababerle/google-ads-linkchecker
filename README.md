@@ -63,7 +63,7 @@ var config = {
   *
   * "Do not touch"-area
   *
-  * These functions are used for the stupe process
+  * These functions are used for the setup process
   * when first using the script or for the mail support
   */
   
